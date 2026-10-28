@@ -1,28 +1,90 @@
-トップスライダー：名称統一版 / 2026-10-19
+クラフトカフェ Yahoo!トップスライダー エディター
+2026-10-28
 
-ZIPを展開し、top-sliderフォルダごとトリプルへアップロードしてください。
-旧craftcafe-sliderフォルダは、新URLで確認後に削除できます。
+このフォルダは、クラフトカフェ Yahoo!ショッピング店のトップスライダーを更新するための編集ツールです。
 
-表示ページ（アップロード後）：
+【エディターを開く】
+
+GitHub Pages 公開URL：
+
+https://craftcafestaff-sys.github.io/craftcafe-slider-editor/top-slider-editor.html
+
+このページをChromeのブックマークに登録して使用します。
+
+
+【主なファイル】
+
+top-slider-editor.html
+スライダー編集画面です。
+
+editor.js
+編集画面の動作に使用します。
+
+top-slider-preview.html
+編集内容を確認するためのプレビュー画面です。
+
+slides-data.js
+スライダーに表示する画像URL・リンクURLなどの登録データです。
+
+top-slider.css
+スライダー表示用CSSです。
+
+top-slider.js
+スライダー表示・自動再生・スワイプ・ドラッグ・リンク動作に使用します。
+
+top-slider.html
+Yahoo!ショッピング本番トップページで読み込むスライダー表示用HTMLです。
+
+
+【更新方法】
+
+1. Chromeのブックマークから
+   top-slider-editor.html を開きます。
+
+2. スライダー画像・リンク先・表示順などを編集します。
+
+3. 編集完了後、slides-data.js を書き出します。
+
+4. 書き出した slides-data.js をYahoo!サーバーの
+
+   /top-slider/slides-data.js
+
+   に上書きアップロードします。
+
+5. Yahoo!トップページを確認し、スライダーが正常に表示・リンクすることを確認します。
+
+
+【Yahoo!本番スライダー】
+
+表示ページ：
+
 https://shopping.geocities.jp/craftcafe/top-slider/top-slider.html
-更新画面（アップロード後）：
-https://shopping.geocities.jp/craftcafe/top-slider/top-slider-editor.html
 
-slider-test.html → top-slider.html
-slider.css → top-slider.css
-slider.js → top-slider.js
-slider-editor.html → top-slider-editor.html
-slider-preview.html → top-slider-preview.html
-editor.js と slides-data.js は名前を維持。
-見本sampleファイルとtest表記は削除しました。
+Yahoo!トップページでは、このページをiframeで読み込んでいます。
 
-現在サーバーにある登録データ3枚と動作を取得して引き継ぎました。
-900px正方形、PCドラッグ、スマホタッチ処理を維持。
-画像URL・リンクURLは取得時点の登録をそのまま維持しています。
-更新時は引き続き slides-data.js を書き出し、top-sliderフォルダ内へ上書きします。
 
-本番トップ等で旧フォルダを参照している場合は新しいパスへ変更してください。
-新フォルダではブラウザ自動保存の旧入力が引き継がれる場合があります。
-必要に応じ「以前のデータを読み込む」で、この一式のslides-data.jsを読み込んでください。
+【スライダー仕様】
 
-ファイル参照とJS構文確認済み。新URLの描画確認は配置後に行ってください。
+・正方形画像
+・PCではドラッグ操作対応
+・スマートフォンではスワイプ操作対応
+・自動再生あり
+・左右矢印あり
+・ドットナビゲーションあり
+・リンクはiframe内ではなくYahoo!ページ全体で開く仕様
+
+
+【注意】
+
+GitHub上のファイルを変更しても、Yahoo!本番スライダーは自動では更新されません。
+
+実際の商品・特集内容を変更した場合は、エディターから書き出した slides-data.js をYahoo!サーバーへアップロードしてください。
+
+Yahoo!本番で使用するファイルと、GitHub上の編集用ファイルを混同しないようにしてください。
+
+
+【GitHubリポジトリ】
+
+craftcafe-slider-editor
+
+GitHub Pagesは、mainブランチ / root から公開しています。
